@@ -15,12 +15,12 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
 
 ### Screenshot
 
-![](https://github.com/Dejmian11/Equalizer-landing-page/blob/master/assets/design/Screenshot%20-%20Frontend%20Mentor%20Equalizer%20landing%20page.png)
+![](https://github.com/Dejmian11/Testimonials-grid-section/blob/master/assets/design/Screenshot%20-%20Frontend%20Mentor%20Testimonials%20grid%20section.png)
 
 ### Links
 
-- Solution URL: [Solution](https://www.frontendmentor.io/solutions/equalizer-landing-page-build-with-sass-gor8vGsg80)
-- Live Site URL: [Live](https://astonishing-blini-a5dfb2.netlify.app/)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/testimonials-grid-section-build-with-sass-VFIDvsOHzt)
+- Live Site URL: [Live](https://spiffy-muffin-02d181.netlify.app/)
 
 ## My process
 
