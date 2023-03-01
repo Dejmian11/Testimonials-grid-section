@@ -1,0 +1,222 @@
+// GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+// VARIABLES
+:root {
+  // Colors
+  --clr-primary-400: 263, 55%, 52%;
+  --clr-primary-500: 264, 82%, 70%;
+
+  --clr-secondary-200: 219, 29%, 14%;
+  --clr-secondary-400: 217, 19%, 35%;
+  --clr-secondary-900: 210, 46%, 95%;
+
+  --clr-neutral-800: 0, 0%, 81%;
+  --clr-neutral-900: 0, 0%, 100%;
+
+  // Font family
+  --ff-primary: 'Barlow Semi Condensed', sans-serif;
+
+  // Font weights
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+
+  // Font sizes
+  --fs-200: 0.6875rem;
+  --fs-300: 0.8125rem;
+  --fs-600: 1.25rem;
+}
+
+// RESET
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  display: block;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 576px         X-small
+576 - 768px       Small
+768 - 992px       Medium
+992 - 1200px      Large
+1200px - 1400px   Extra large
+> 1400px          Extra extra large
+
+$breakpoint argument choices:
+- xs
+- sm
+- md
+- lg
+- xl
+- xxl
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == xs {
+    // < 576px
+    @media only screen and (max-width: 36em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == sm {
+    @media only screen and (min-width: 36em) {
+      // 576px
+      @content;
+    }
+  }
+
+  @if $breakpoint == md {
+    @media only screen and (min-width: 48em) {
+      // 768px
+      @content;
+    }
+  }
+
+  @if $breakpoint == lg {
+    @media only screen and (min-width: 62em) {
+      //  992px
+      @content;
+    }
+  }
+
+  @if $breakpoint == xl {
+    @media only screen and (min-width: 75em) {
+      //  1200px
+      @content;
+    }
+  }
+
+  @if $breakpoint == xxl {
+    @media only screen and (min-width: 87.5em) {
+      //  > 1400px
+      @content;
+    }
+  }
+}
+
+// UTILITIES
+.border-primary-400 {
+  border: 2px solid hsl(var(--clr-primary-400));
+}
+
+.border-primary-500 {
+  border: 2px solid hsl(var(--clr-primary-500));
+}
+
+.bg-primary-400 {
+  background-color: hsl(var(--clr-primary-400));
+}
+
+.bg-secondary-200 {
+  background-color: hsl(var(--clr-secondary-200));
+}
+
+.bg-secondary-400 {
+  background-color: hsl(var(--clr-secondary-400));
+}
+
+.bg-neutral-900 {
+  background-color: hsl(var(--clr-neutral-900));
+}
+
+.text-secondary-400 {
+  color: hsl(var(--clr-secondary-400));
+}
+
+.text-secondary-900 {
+  color: hsl(var(--clr-secondary-900));
+}
+
+// BASE
+body {
+  margin-block: 4.4375rem;
+  background-color: hsl(var(--clr-secondary-900));
+
+  @include respond(lg) {
+    margin-top: 10.25rem;
+  }
+}
+
+// TYPOGRAPHY
+body {
+  color: hsl(var(--clr-neutral-900));
+  font-size: var(--fs-300);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-medium);
+  line-height: 1.3;
+}
